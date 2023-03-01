@@ -3,7 +3,6 @@ message: "If you use this software, please cite it as below."
 authors:
   - family-names: Romeral
     given-names: Gonzalo
-    orcid: https://orcid.org/0000-0000-0000-0000
 title: gonzaloromeral/Open-Science-Practices: Grobid_1.1
 version: Grobid1.1
 date-released: 2023-03-01
