@@ -1,5 +1,5 @@
 # Open-Science-Practices
-![image](https://user-images.githubusercontent.com/124781506/222091844-566b39ca-c040-47e0-ba10-bda675728ad5.png)
+[![DOI](https://zenodo.org/badge/599046489.svg)](https://zenodo.org/badge/latestdoi/599046489)
 
 Prácticas de la asignatura optativa Open Science de la UPM
 Gonzalo Romeral Álvarez -- 2023
