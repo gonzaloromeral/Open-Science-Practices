@@ -1,0 +1,48 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "@type": "SoftwareSourceCode",
+    "license": "https://spdx.org/licenses/CC0-1.0",
+    "codeRepository": "https://github.com/gonzaloromeral/Open-Science-Practices",
+    "contIntegration": "https://www.travis-ci.org/gonzaloromeral/Open-Science-Practices",
+    "dateCreated": "2023-02-15",
+    "datePublished": "2023-02-22",
+    "dateModified": "2023-03-01",
+    "downloadUrl": "https://github.com/gonzaloromeral/Open-Science-Practices/blob/main/grobid_1.1.py",
+    "issueTracker": "https://github.com/gonzaloromeral/Open-Science-Practices/issues",
+    "name": "Grobid PDF Converter",
+    "version": "1.1",
+    "identifier": "10.5281",
+    "description": "My Software perform an analysis over 10 open-access\narticles using Grobid, draw a a keyword cloud based on the abstract information, create a visualization showing the number of figures per article and create a list of the links found in each paper",
+    "applicationCategory": "Engineering",
+    "releaseNotes": "Fix metadata information",
+    "referencePublication": "https://zenodo.org/record/7687668#.Y_8eLnbMJPY",
+    "funder": {
+        "@type": "Organization",
+        "name": "Gonzalo Romeral Álvarez"
+    },
+    "keywords": [
+        "grobid",
+        "papers",
+        "pdf",
+        "conversion"
+    ],
+    "programmingLanguage": [
+        "Python 3"
+    ],
+    "operatingSystem": [
+        "Windows"
+    ],
+    "softwareRequirements": [
+        "Python 3.7 +",
+        "Windows 8 +",
+        ""
+    ],
+    "author": [
+        {
+            "@type": "Person",
+            "givenName": "Romeral",
+            "familyName": "Gonzalo ",
+            "email": "gonzalo.romeral.alvarez@alumnos.upm.es"
+        }
+    ]
+}
