@@ -11,17 +11,12 @@ from collections import Counter
 
 class TestScript(unittest.TestCase):
 
-    @patch('builtins.input', side_effect=["/path/to/files"])
-    @patch('tkinter.filedialog.askdirectory', return_value="/path/to/files")
     def test_search_for_file_path(self, mock_input, mock_filedialog):
-        # Test file path returned is correct
         expected = "/path/to/files"
         actual = search_for_file_path()
         self.assertEqual(actual, expected)
 
-    @patch.object(GrobidClient, 'process')
     def test_grobid_client_process(self, mock_process):
-        # Test that GrobidClient.process() method is called with the correct arguments
         mock_process.return_value = "success"
         expected = "success"
         actual = GrobidClient().process("processFulltextDocument", "/path/to/files")
