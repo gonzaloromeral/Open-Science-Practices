@@ -17,18 +17,27 @@ Crea una lista de los enlaces encontrados en cada documento.
 #Instalación previa
 - Python: https://www.python.org/downloads/
 - Docker: https://www.docker.com/products/docker-desktop/
-- Dependencias de python:
-    -Grobid Client
+- Pip: Para instalar librerias en python, aquí un tutorial de como descargarlo https://python-poetry.org/docs/#installing-with-the-official-installer
+- Dependencias de python(:
+    -grobid_Client
     -Beautiful Soup
     -lxml
     -bs4
     -wordcloud  
     -matplotlib
+    -poetry
+     
     -Dependencias colaterales de las anteriores librerias
 -Sistema operativo preferido: Windows 7+
 
 #Ejecucion 
-- Genera tu propio entorno a través de estos pasos
+- Genera tu propio entorno a través de estos pasos:
+   * Abre el cmd y ejecuta poetry instalado con anterioridad
+   * Creamos un nuevo proyecto con poetry new <name>
+   * Añadimos todas las dependencias explicadas en el apartado dependencias de python con el comando poetry add <library_name>
+   * Activamos el entorno poetry shell, y todas las librerías
+   * Ejecutamos nuestro script con poetry run python myscript.py
+   * Una vez realizado todo el proceso, desactivamos el shell con  deactivate o exit
 - Ejecutar las instrucciones del dockerfile, llamado docker_openScience.yml
 - Para comprobar que hemos instalado todo en orden entramos http://localhost:8070/ y si todo va en orden debería estar funcionando nuestro cliente 
 -Ejecutamos en nuestro entorno el script grobid_2.1.py a través de python, en nuestro entorno 
