@@ -27,8 +27,10 @@ Crea una lista de los enlaces encontrados en cada documento.
     -matplotlib
     -poetry
     -unittest
-     
-    -Dependencias colaterales de las anteriores librerias
+-Docker servidor Grobid, una vez instalado docker
+   docker pull lfoppiano/grobid:0.7.2
+   docker run --rm -p 8070:8070 -p 8081:8071 lfoppiano/grobid:0.7.2   
+-Dependencias colaterales de las anteriores librerias
 -Sistema operativo preferido: Windows 7+
 
 #Ejecucion 
