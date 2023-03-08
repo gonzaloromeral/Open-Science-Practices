@@ -1,24 +1,20 @@
 # Open-Science-Practices
 [![DOI](https://zenodo.org/badge/599046489.svg)](https://zenodo.org/badge/latestdoi/599046489)
 
-Prácticas de la asignatura optativa Open Science de la UPM
-Gonzalo Romeral Álvarez -- 2023
+Open Science elective subject practices at UPM Gonzalo Romeral Álvarez -- 2023
 
 
--Conectarse al host
+-Connect to the host
 
--A través del cliente, sacar los xml de nuestros 10 papers
+-Use the client to retrieve the XML files of our 10 papers
 
--Con la salida generar:
-Dibuja una nube de palabras clave basada en la información del resumen.
-Crea una visualización que muestre el número de figuras por artículo.
-Crea una lista de los enlaces encontrados en cada documento.
+-Generate output: Draw a word cloud of keywords based on the abstract information. Create a visualization that shows the number of figures per article. Create a list of links found in each document.
 
-#Instalación previa
+#Pre-installation
 - Python: https://www.python.org/downloads/
 - Docker: https://www.docker.com/products/docker-desktop/
-- Pip: Para instalar librerias en python, aquí un tutorial de como descargarlo https://python-poetry.org/docs/#installing-with-the-official-installer
-- Dependencias de python:
+- Pip: To install libraries in Python, here's a tutorial on how to download it: https://python-poetry.org/docs/#installing-with-the-official-installer
+- Python dependencies:
     -grobid_Client
     -Beautiful Soup
     -lxml
@@ -28,26 +24,25 @@ Crea una lista de los enlaces encontrados en cada documento.
     -poetry
     -unittest
     
-- Docker servidor Grobid, una vez instalado docker ejecutamos los siguientes comandos:
+- Grobid Docker server, once Docker is installed, run the following commands:
    * docker pull lfoppiano/grobid:0.7.2
    * docker run --rm -p 8070:8070 -p 8081:8071 lfoppiano/grobid:0.7.2   
-- Dependencias colaterales de las anteriores librerias
-   Sistema operativo preferido: Windows 7+
+- Additional dependencies of the above libraries
+   Preferred operating system: Windows 7+
 
-#Ejecucion 
-- Genera tu propio entorno a través de estos pasos:
-   * Abre el cmd y ejecuta poetry instalado con anterioridad
-   * Creamos un nuevo proyecto con poetry new <name>
-   * Añadimos todas las dependencias explicadas en el apartado dependencias de python con el comando poetry add <library_name>
-   * Activamos el entorno poetry shell, y todas las librerías
-   * Ejecutamos nuestro script con poetry run python myscript.py
-   * Una vez realizado todo el proceso, desactivamos el shell con  deactivate o exit
-- Ejecutar el Dockerfile, y dentro hay instrucciones de como correr el script 
-- Para comprobar que hemos instalado todo en orden entramos http://localhost:8070/ y si todo va en orden debería estar funcionando nuestro cliente 
-- Ejecutamos en nuestro entorno el script grobid_2.1.py a través de python 
-- Nos pedirá un directorio, debemos seleccionar aquel donde tengamos los pdfs, sino tiene pdfs el directorio saldrá error, y hay que ejecutar otra vez el script.
-- En esta versión dejara los xml en el mismo directorio, para otra versión se podrá elegir el directorio de salida.
-- Por último creará un documento, con los tres apartados de la nube de palabras, las figuras y los links.
+#Execution
+- Generate your own environment through these steps:
+   * Open the command prompt and run previously installed poetry
+   * Create a new project with poetry new <name>
+   * Add all dependencies explained in the Python dependencies section with the command poetry add <library_name>
+   * Activate the poetry shell and all libraries
+   * Run our script with poetry run python myscript.py
+   * Once the process of the script is completed, deactivate the shell with deactivate or exit
+- Execute the Dockerfile, and inside there are instructions on how to run the script
+- To check that everything has been installed properly, enter http://localhost:8070/ and if everything is working properly, our client should be running 
+- Run the grobid_2.1.py script in our environment using Python 
+- It will ask for a directory, and we must select the directory where we have the PDFs. If the directory doesn't have PDFs, an error will occur, and the script must be run again.
+- In this version, the XML files will be saved in the same directory. For another version, the output directory can be chosen.
+- Finally output values will be host in the actual working directory
 
-Si surge algún problema, puedo solucionarlo si se me comenta con anterioridad
--Probado con XMLs en el entorno y funciona, queda probarlo con los pdfs directamente. Generamos nuestro entorno o correremos el script gracias a la imagen de docker(sin probar del todo)
+If there are any issues, I can solve them if informed in advance - Tested with XMLs in the environment and it works, it remains to be tested directly with PDFs. Generate our environment or run the script thanks to the Docker image (not fully tested).
