@@ -5,6 +5,7 @@ import os
 from bs4 import BeautifulSoup as bs
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
+from collections import Counter
 
 root = tkinter.Tk()
 root.withdraw()
@@ -26,7 +27,8 @@ client.process("processFulltextDocument", file_path_variable)
 listaglobalKeywords = []
 listaglobalnFiguras = []
 listagloballinks = []
-
+list1 = []
+i = 1
 contenido = os.listdir(file_path_variable)
 xml = []
 for fichero in contenido:
@@ -35,38 +37,35 @@ for fichero in contenido:
     if os.path.isfile(aux) and fichero.endswith('.xml'):
         xml.append(aux)
 
-print(xml)
 
 for unit in xml:
-
+    list1.append("Archivo" + str(i))
+    i = i + 1
     content = []
     with open(unit, "r", encoding="utf8") as file:
         content = file.readlines()
-
     content1 = "".join(content)
     bs_content = bs(content1, "lxml")
     result1 = bs_content.find_all("term")
-    list1 = []
     for each in result1:
-        list1.append(each.get_text())
-
-    listaglobalKeywords.append(list1)
+        listaglobalKeywords.append(each.get_text())
     result2 = bs_content.find_all("figure")
     listaglobalnFiguras.append(len(result2))
     result3 = bs_content.find_all("ptr")
     list2 = []
     for each in bs_content.find_all("ptr"):
         list2.append(each.get("target"))
-
     listagloballinks.append(list2)
 
-unique_string=(" ").join(listaglobalKeywords)
-wordcloud = WordCloud(width = 1000, height = 500).generate(unique_string)
+word_cloud_dict = Counter(listaglobalKeywords)
+wordcloud = WordCloud(width = 1000, height = 500).generate_from_frequencies(word_cloud_dict)
 plt.figure(figsize=(15,8))
 plt.imshow(wordcloud)
 plt.axis("off")
-plt.savefig("your_file_name"+".png", bbox_inches='tight')
-
-plt.bar(listaglobalnFiguras)
-print(listagloballinks)
-plt.show()
+plt.savefig(os.path.join(file_path_variable, "wordcloud.png"))
+plt.clf()
+x2 = plt.bar(list1, listaglobalnFiguras)
+plt.savefig(os.path.join(file_path_variable, "figuras.png"))
+with open(os.path.join(file_path_variable, "links.txt"), 'w') as temp_file:
+    for item in listagloballinks:
+        temp_file.write("%s\n" % item)
