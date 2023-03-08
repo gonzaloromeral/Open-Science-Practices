@@ -18,7 +18,7 @@ Crea una lista de los enlaces encontrados en cada documento.
 - Python: https://www.python.org/downloads/
 - Docker: https://www.docker.com/products/docker-desktop/
 - Pip: Para instalar librerias en python, aquí un tutorial de como descargarlo https://python-poetry.org/docs/#installing-with-the-official-installer
-- Dependencias de python(:
+- Dependencias de python:
     -grobid_Client
     -Beautiful Soup
     -lxml
@@ -27,6 +27,7 @@ Crea una lista de los enlaces encontrados en cada documento.
     -matplotlib
     -poetry
     -unittest
+    
 -Docker servidor Grobid, una vez instalado docker
    docker pull lfoppiano/grobid:0.7.2
    docker run --rm -p 8070:8070 -p 8081:8071 lfoppiano/grobid:0.7.2   
