@@ -46,3 +46,4 @@ Crea una lista de los enlaces encontrados en cada documento.
 -Por último creará un documento, con los tres apartados de la nube de palabras, las figuras y los links.
 
 Si surge algún problema, puedo solucionarlo si se me comenta con anterioridad
+-Probado con XMLs en el entorno y funciona, queda probarlo con los pdfs directamente.
