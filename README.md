@@ -26,6 +26,7 @@ Crea una lista de los enlaces encontrados en cada documento.
     -wordcloud  
     -matplotlib
     -poetry
+    -unittest
      
     -Dependencias colaterales de las anteriores librerias
 -Sistema operativo preferido: Windows 7+
