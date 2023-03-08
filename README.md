@@ -44,10 +44,10 @@ Crea una lista de los enlaces encontrados en cada documento.
    * Una vez realizado todo el proceso, desactivamos el shell con  deactivate o exit
 - Ejecutar las instrucciones del dockerfile, llamado docker_openScience.yml
 - Para comprobar que hemos instalado todo en orden entramos http://localhost:8070/ y si todo va en orden debería estar funcionando nuestro cliente 
--Ejecutamos en nuestro entorno el script grobid_2.1.py a través de python 
--Nos pedirá un directorio, debemos seleccionar aquel donde tengamos los pdfs, sino tiene pdfs el directorio saldrá error, y hay que ejecutar otra vez el script.
--En esta versión dejara los xml en el mismo directorio, para otra versión se podrá elegir el directorio de salida.
--Por último creará un documento, con los tres apartados de la nube de palabras, las figuras y los links.
+- Ejecutamos en nuestro entorno el script grobid_2.1.py a través de python 
+- Nos pedirá un directorio, debemos seleccionar aquel donde tengamos los pdfs, sino tiene pdfs el directorio saldrá error, y hay que ejecutar otra vez el script.
+- En esta versión dejara los xml en el mismo directorio, para otra versión se podrá elegir el directorio de salida.
+- Por último creará un documento, con los tres apartados de la nube de palabras, las figuras y los links.
 
 Si surge algún problema, puedo solucionarlo si se me comenta con anterioridad
 -Probado con XMLs en el entorno y funciona, queda probarlo con los pdfs directamente.
